@@ -12,15 +12,14 @@ public enum OperatorType {
         this.operator = operator;
     }
 
-    public char getOperator() {
-        return this.operator;
+    public char getOperator(){
+        return operator;
     }
 
     public static OperatorType findOperator(char operator) {
-        for(OperatorType op : values()) {
-            if (op.getOperator() == operator) {
+        for(OperatorType op: OperatorType.values()){
+            if (op.getOperator() == operator)
                 return op;
-            }
         }
 
         throw new IllegalArgumentException();
